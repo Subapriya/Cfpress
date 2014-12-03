@@ -1,0 +1,56 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Thu Oct 30 09:34:40 2014
+
+   Source : C:\Users\snageswaran\Documents\My Web Sites\UmbracoMVCTest\UmbracoMVCTest\bin\
+     Dest : C:\Users\snageswaran\Documents\My Web Sites\UmbracoMVCTest\UmbracoMVCTest\App_Data\NuGetBackup\20141030-093439\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  25	C:\Users\snageswaran\Documents\My Web Sites\UmbracoMVCTest\UmbracoMVCTest\bin\
+	    New File  		   45416	Microsoft.Web.Infrastructure.dll  0%  100%  
+	    New File  		   23640	Microsoft.Web.Mvc.FixedDisplayModes.dll  0%  100%  
+	    New File  		  391680	Newtonsoft.Json.dll  0%   33%   66%  100%  
+	    New File  		  440219	Newtonsoft.Json.xml  0%   29%   59%   89%  100%  
+	    New File  		  168520	System.Net.Http.Formatting.dll  0%   77%  100%  
+	    New File  		  137872	System.Net.Http.Formatting.xml  0%   95%  100%  
+	    New File  		  138432	System.Web.Helpers.dll  0%   94%  100%  
+	    New File  		   74208	System.Web.Helpers.xml  0%  100%  
+	    New File  		  323240	System.Web.Http.dll  0%   40%   81%  100%  
+	    New File  		   73384	System.Web.Http.WebHost.dll  0%  100%  
+	    New File  		   10071	System.Web.Http.WebHost.xml  0%  100%  
+	    New File  		  379561	System.Web.Http.xml  0%   34%   69%  100%  
+	    New File  		  507048	System.Web.Mvc.dll  0%   25%   51%   77%  100%  
+	    New File  		  847872	System.Web.Mvc.xml  0%   30%   61%   92%  100%  
+	    New File  		  266944	System.Web.Razor.dll  0%   49%   98%  100%  
+	    New File  		  365160	System.Web.Razor.xml  0%   35%   71%  100%  
+	    New File  		   41152	System.Web.WebPages.Deployment.dll  0%  100%  
+	    New File  		    2812	System.Web.WebPages.Deployment.xml  0%  100%  
+	    New File  		  204480	System.Web.WebPages.dll  0%   64%  100%  
+	    New File  		   39616	System.Web.WebPages.Razor.dll  0%  100%  
+	    New File  		   17776	System.Web.WebPages.Razor.xml  0%  100%  
+	    New File  		  223301	System.Web.WebPages.xml  0%   58%  100%  
+	    New File  		    4096	UmbracoMVCTest.dll  0%  100%  
+	    New File  		    2204	UmbracoMVCTest.dll.config  0%  100%  
+	    New File  		    7680	UmbracoMVCTest.pdb  0%  100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :        25        25         0         0         0         0
+   Bytes :    4.51 m    4.51 m         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :            94727680 Bytes/sec.
+   Speed :            5420.361 MegaBytes/min.
+
+   Ended : Thu Oct 30 09:34:40 2014

@@ -1,0 +1,2 @@
+C:\Users\snageswaran\Documents\CFPress.UmbracoMVCAzureSolution\CFPress.UmbracoMVCAzureCloudServiec\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\snageswaran\Documents\CFPress.UmbracoMVCAzureSolution\CFPress.UmbracoMVCAzureCloudServiec\bin\Debug\ServiceDefinition.csdef

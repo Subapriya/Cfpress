@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CFPress.UmbracoMVCAzureCloudServiec" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="CFPress.UmbracoMVCApplication">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="UmbracoConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cfpressstorage;AccountKey=vT0wwkQWGPsMSlNb30nVkt+AGVuCV41CUe8/BCvhuT8L2CGhhC+46T1RCuBVKHdSShTXNpzmwWSsSsbdcdgUgg==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

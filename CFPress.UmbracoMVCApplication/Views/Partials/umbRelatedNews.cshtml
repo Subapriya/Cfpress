@@ -1,0 +1,46 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    // Model.Content is the current page that we're on
+    // AncestorsOrSelf is all of the ancestors this page has in the tree
+    // (1) means: go up to level 1 and stop looking for more ancestors when you get there
+    // First() gets the first ancestor found (the home page, on level 1)
+    var homePage = CurrentPage.AncestorsOrSelf(1).First();
+    
+    
+}
+
+<!-- Archives -->
+<ul class="style2">
+    
+        <li>
+            <article class="is-post-summary">
+          
+             @*@foreach (  IPublishedProperty property in @Model.Content.Properties)
+             { 
+                if(property.PropertyTypeAlias == "relatednews")
+                { 
+                 <h3><a href="">@property.DataValue.AsEnumerableOfOne().FirstOrDefault()</a></h3>
+             }
+             }*@
+
+                @{
+                    if (CurrentPage.HasValue("relatednews") && CurrentPage.relatedNews.Count > 0)
+                    {
+                        <ul>
+                            @foreach (var item in CurrentPage.relatedNews)
+                            {
+                                var linkUrl = (item.type.Equals("internal")) ? Umbraco.NiceUrl(int.Parse(item.link)) : item.link;
+                                var linkTarget = (item.newWindow.Value) ? "target=\"_blank\"" : string.Empty;
+                                <li><a href="@linkUrl" @Html.Raw(linkTarget)>@item.title</a></li>
+                            }
+                        </ul>
+                    }
+                }   
+             
+
+            </article>
+        </li>
+   
+</ul>
+
+<!-- /Archives -->

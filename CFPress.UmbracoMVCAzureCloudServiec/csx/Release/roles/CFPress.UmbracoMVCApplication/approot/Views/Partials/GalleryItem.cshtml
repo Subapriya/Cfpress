@@ -1,0 +1,37 @@
+﻿@model CFPress.UmbracoMVCApplication.Models.CompetitionsViewModel
+
+@{
+    Html.EnableClientValidation(true);
+    Html.EnableUnobtrusiveJavaScript(true);
+}
+
+@if (!ViewData.ModelState.IsValid)
+{
+
+    foreach (ModelState modelState in ViewData.ModelState.Values)
+    {
+        var errors = modelState.Errors;
+        if (errors.Any())
+        {
+            <ul>
+                @foreach (ModelError error in errors)
+                {
+                    <li><em>@error.ErrorMessage</em></li>
+                }
+            </ul>
+        }
+    }
+}
+
+
+@using (Html.BeginUmbracoForm("HandleVoting", "Competitions", FormMethod.Post))
+{
+    @Html.ValidationSummary(true);
+   
+     <div>
+    <h2>Vote</h2>
+    <input type="submit" value="Vote" name="action" />
+    @*</p>*@
+</div>
+}
+

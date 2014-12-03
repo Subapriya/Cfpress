@@ -1,0 +1,20 @@
+X-Sender: "Sender's name" <snageswaran@cfpress.co.uk>
+X-Receiver: john@doe.com
+MIME-Version: 1.0
+From: "Sender's name" <snageswaran@cfpress.co.uk>
+To: john@doe.com
+Date: 19 Nov 2014 14:25:25 +0000
+Subject: Verify email address
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+VW1icmFjb01WQ0FwcGxpY2F0aW9uLk1vZGVscy5SZWdpc3Rlck1lbWJlclZpZXdNb2Rl
+bCBVbWJyYWNvTVZDQXBwbGljYXRpb24uTW9kZWxzLlJlZ2lzdGVyVmlld01vZGVsDQp7
+DQogICAgTGF5b3V0ID0gbnVsbDsNCn0NCg0KPCFET0NUWVBFIGh0bWw+DQoNCjxodG1s
+Pg0KPGhlYWQ+DQogICAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRo
+PWRldmljZS13aWR0aCIgLz4NCiAgICA8dGl0bGU+UmVnaXN0ZXJNZW1iZXJWZXJpZmlj
+YXRpb25FbWFpbC5odG1sLmNzaHRtbDwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCiAg
+ICA8ZGl2Pg0KICAgICAgICBQbGVhc2UgdmVyaWZ5IHlvdXIgZW1haWwgYWRkcmVzcyA4
+ZDlhNTNiMS00NTZkLTQzYTgtYjY3Ni1iMWFiZjQ3YTMzYWQ7DQogICAgICAgIFBsZWFz
+ZSBjbGljayBoZXJlIHRvIHZlcmlmeSB5b3VyIGVtYWlsIGFkZHJlc3MNCiAgICAgICAg
+PGEgaHJlZj0iIj48L2E+DQogICAgPC9kaXY+DQo8L2JvZHk+DQo8L2h0bWw+

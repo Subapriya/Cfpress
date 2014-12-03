@@ -1,0 +1,31 @@
+X-Sender: your@email.here
+X-Receiver: snageswaran@cfpress.co.uk
+MIME-Version: 1.0
+From: your@email.here
+To: snageswaran@cfpress.co.uk
+Date: 20 Nov 2014 14:17:57 +0000
+Subject: Contour Record
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<uformrecord><state>Approved</state><created>2014-11-20T14:17:11<=
+/created><updated>2014-11-20T14:17:11</updated><id>0a860c0e-0b5a-=
+4ca3-be7e-5009f9a4f0da</id><ip>::1</ip><pageid url=3D"http://loca=
+lhost:8081/events-form/" name=3D"Events Form">1222</pageid><membe=
+rkey email=3D"" login=3D""></memberkey><fields><eventvenue record=
+=3D"0a860c0e-0b5a-4ca3-be7e-5009f9a4f0da" sortorder=3D"2" pageind=
+ex=3D"0" fieldsetindex=3D"0"><key>822fd606-33bf-47a9-8a99-1c53c0b=
+26c3c</key><fieldKey>92064be8-7914-4f39-b6da-6da221d31549</fieldK=
+ey><caption>Event venue</caption><datatype>LongString</datatype><=
+values><value><![CDATA[]]></value></values></eventvenue><nameofth=
+eevent record=3D"0a860c0e-0b5a-4ca3-be7e-5009f9a4f0da" sortorder=3D=
+"0" pageindex=3D"0" fieldsetindex=3D"0"><key>2c51bfce-684a-45da-9=
+db8-8120f27bed92</key><fieldKey>9d439832-7131-4c21-ac15-a36607551=
+209</fieldKey><caption>Name of the event</caption><datatype>Strin=
+g</datatype><values><value><![CDATA[Test event]]></value></values=
+></nameoftheevent><eventdate record=3D"0a860c0e-0b5a-4ca3-be7e-50=
+09f9a4f0da" sortorder=3D"1" pageindex=3D"0" fieldsetindex=3D"0"><=
+key>13497bfc-995f-4e57-846c-dfe014e903e5</key><fieldKey>1d1fa77b-=
+9e11-46dd-9102-1c9590129e50</fieldKey><caption>Event date</captio=
+n><datatype>DateTime</datatype><values></values></eventdate></fie=
+lds></uformrecord>

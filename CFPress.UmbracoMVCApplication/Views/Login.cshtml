@@ -1,0 +1,45 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "umbLayout.cshtml";
+
+    // If the editor has not explicitly provided the "Page title" property page 
+    // then just show the name of the page otherwise show the provided title
+    var pageTitle = string.IsNullOrWhiteSpace(CurrentPage.Title)
+        ? CurrentPage.Name
+        : CurrentPage.Title;    
+}
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="9u skel-cell-mainContent">
+                <div class="content content-left">
+                    <!-- Content -->
+                  @Umbraco.RenderMacro("LoginUserControl")
+                </div>
+            </div>
+            <div class="3u">
+                <div class="sidebar">
+                    <!-- Sidebar -->
+                    @{ Html.RenderPartial("umbLatestNewsWidget"); }
+                    <!-- /Sidebar -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+               <h2>Related Pages</h2>
+@{ Html.RenderPartial("RelatedPages");}
+
+                <div>
+                    <h2>Sign In or Register to comment or rate comments</h2>
+
+                    @*@{Html.Partial("RegistrationForm", new UmbracoMVCTest.Models.RegistrationFormViewModel(Model, new string[] { Model.CurrentCulture.ToString() }));}*@
+                    @{Html.RenderPartial("RegistrationForm",new UmbracoMVCTest.Models.RegistrationFormViewModel());}
+                                       
+                </div>
+					
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Main -->

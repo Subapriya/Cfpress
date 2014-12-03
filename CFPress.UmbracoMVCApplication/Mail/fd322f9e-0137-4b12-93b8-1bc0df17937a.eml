@@ -1,0 +1,16 @@
+X-Sender: your@email.here
+X-Receiver: subapriya.n@gmail.com
+MIME-Version: 1.0
+From: your@email.here
+To: subapriya.n@gmail.com
+Date: 20 Nov 2014 14:09:27 +0000
+Subject: the form Contact us was submitted
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<p>the form Contact us was submitted, this is the list of values =
+it contained, you can turn this email off under workflows in Umbr=
+aco Contour</p><dl><dt><strong>Name: </strong><dt><dd>Suba<br/></=
+dd><dt><strong>Email: </strong><dt><dd>subapriya.n@gmail.com<br/>=
+</dd><dt><strong>Message: </strong><dt><dd>test contour<br/></dd>=
+</dl>

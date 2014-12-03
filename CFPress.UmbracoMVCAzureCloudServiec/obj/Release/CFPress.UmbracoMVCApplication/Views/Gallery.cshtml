@@ -1,0 +1,69 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    Layout = "umbLayout.cshtml";
+
+    // If the editor has not explicitly provided the "Page title" property page 
+    // then just show the name of the page otherwise show the provided title
+    var pageTitle = string.IsNullOrWhiteSpace(CurrentPage.Title)
+        ? CurrentPage.Name
+        : CurrentPage.Title;
+    var model = @Model;
+    // Model.Content is the current page that we're on
+    // AncestorsOrSelf is all of the ancestors this page has in the tree
+    // (1) means: go up to level 1 and stop looking for more ancestors when you get there
+    // First() gets the first ancestor found (the home page, on level 1)
+    var homePage = CurrentPage.AncestorsOrSelf(1).First();    
+    
+    // Find all pages with document type alias umbNewsOverview
+    // We do that using the plural, umbNewsOverviews (note the extra "s" in the end)
+    // Then take the first one, as we know there will only be on news overview page
+    var galleryOverview = homePage.umbGalleryOverviews.First();
+    int selectedentries = galleryOverview.GetPropertyValue("entriestopublish");
+
+    // Similar to above: find all pages with document type umbNewsItem under the news overview page
+    // Then order them, first by publishDate (a property the editor can explicitly set on the news item)
+    // and then by createDate, which is set by Umbraco automatically when a page gets created.
+   // var galleryItems = uQuery.GetCurrentNode().GetChildNodes().OrderByDescending(t=>t.GetProperty("vote"));
+    var galleryItems = galleryOverview.umbgalleryItems.OrderBy("vote desc", "vote").Take(selectedentries);
+    
+   
+
+}
+<!-- Main -->
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="12u skel-cell-mainContent">
+                <div class="content">
+                    <!-- Content -->
+                    <article class="is-page-content">
+                        <header>
+                            <h2>@pageTitle</h2>
+                        </header>
+                         @foreach (var item in galleryItems)
+                        {
+                             
+                            // If the editor has not explicitly provided the "Page title" property page 
+                            // then just show the name of the page otherwise show the provided title
+                            var title = string.IsNullOrWhiteSpace(item.Name) 
+                                ? item.Name 
+                                : item.Name;
+
+                                                       
+                            <section>
+                                <h3><a href="@item.Url">@title</a></h3>
+                                @if (string.IsNullOrWhiteSpace(@item.Image) == false)
+                                {
+                                    <span class="image image-full"><img src="@item.Image" alt="" /></span>
+                                }
+                            </section>
+                        }
+                    </article>
+                    <!-- /Content -->
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>
+<!-- /Main -->
