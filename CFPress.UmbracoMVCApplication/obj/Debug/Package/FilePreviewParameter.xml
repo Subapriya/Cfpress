@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="cf-reporter" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\snageswaran\\Documents\\CFPress\.UmbracoMVCAzureSolution\\CFPress\.UmbracoMVCApplication\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\snageswaran\\Documents\\CFPress\.UmbracoMVCAzureSolution\\CFPress\.UmbracoMVCApplication\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="umbracoDbDSN-Web.config Connection String" description="" value="Data Source=tcp:fl79nu5ww6.database.windows.net,1433;Initial Catalog=Umbracocms;User ID=Cfpress@fl79nu5ww6;Password=5y5t3m*212;Connect Timeout=30;Encrypt=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\snageswaran\\Documents\\CFPress\.UmbracoMVCAzureSolution\\CFPress\.UmbracoMVCApplication\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='umbracoDbDSN']/@connectionString" />
+  </parameter>
+</parameters>

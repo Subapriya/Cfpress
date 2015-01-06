@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="umbracoDbDSN-Web.config Connection String" description="umbracoDbDSN Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:fl79nu5ww6.database.windows.net,1433;Database=Umbracocms;Uid=Cfpress@fl79nu5ww6;Pwd=5y5t3m*212;Encrypt=yes;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\snageswaran\\Documents\\CFPress\.UmbracoMVCAzureSolution\\CFPress\.UmbracoMVCApplication\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='umbracoDbDSN']/@connectionString" />
+  </parameter>
+</parameters>

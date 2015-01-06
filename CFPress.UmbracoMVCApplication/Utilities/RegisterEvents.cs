@@ -18,6 +18,8 @@ using umbraco;
 using Umbraco.Core.Models;
 using System.IO;
 using CFPress.UmbracoMVCApplication.Utilities;
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace CFPress.UmbracoMVCApplication.RegisterEvents
 {
@@ -34,6 +36,12 @@ namespace CFPress.UmbracoMVCApplication.RegisterEvents
                 
             //// ContentFinderResolver.Current.InsertType<UmbracoMVCTest.Events.ContentFinder>();#
             ContentService.Publishing += ContentService_Publishing;
+            ContentService.Saving += ContentService_Saving;
+        }
+
+        void ContentService_Saving(IContentService sender, Umbraco.Core.Events.SaveEventArgs<IContent> e)
+        {
+            
         }
 
         void ContentService_Publishing(Umbraco.Core.Publishing.IPublishingStrategy sender, Umbraco.Core.Events.PublishEventArgs<IContent> e)
@@ -47,6 +55,17 @@ namespace CFPress.UmbracoMVCApplication.RegisterEvents
                 var children =  contentService.GetDescendants(maincontent.Id).OrderByDescending(x=>x.GetValue("vote")).Take(selectedEntries);
                 sender.PublishWithChildren(children, 0);
             }
+
+            // save the media file to the azure blob storage account on content save
+            var appsettings = System.Configuration.ConfigurationManager.AppSettings;
+            string[] result = appsettings["StorageConnectionString"].Split(new char[] { ';' }, StringSplitOptions.None);
+            BlobStorageAccessMethods blobaccessmethods = new BlobStorageAccessMethods(result[1], result[2], "images");
+            blobaccessmethods.ContainerName = "images";
+            blobaccessmethods.RunAtAppStartup(result[1], result[2], "images");
+            string imagepath = e.PublishedEntities.FirstOrDefault().Properties["image"].Value.ToString();
+            CloudBlockBlob blob = blobaccessmethods.cloudBlobContainer.GetBlockBlobReference(Path.GetFileName(imagepath));
+            blob.UploadFromFile(imagepath, FileMode.Open);
+
         } 
 
         ////This happens everytime the Umbraco Application starts
@@ -86,12 +105,13 @@ namespace CFPress.UmbracoMVCApplication.RegisterEvents
             if (mySection == null)
             {
                 sectionService.MakeNew("My Custom Section", "MySection ", "traycontent");
-                
+
             }
-            
+
            
         }
 
+       
         ///// <summary>
         ///// Method to create and save the dynamic content from xml
         ///// </summary>

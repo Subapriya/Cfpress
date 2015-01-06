@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ActionMailer.Net.Mvc4;
 using CFPress.UmbracoMVCApplication.Models;
+using SendGrid;
 
 namespace CFPress.UmbracoMVCApplication.Controllers
 {
@@ -25,6 +26,12 @@ namespace CFPress.UmbracoMVCApplication.Controllers
             To.Add(model.EmailAddress);
             Subject = "Verify email address";
             return Email("RegisterMemberVerificationEmail", model);
+        }
+
+        public void SendEmail()
+        {
+            SendGridMessage message = new SendGridMessage();
+            
         }
     }
 

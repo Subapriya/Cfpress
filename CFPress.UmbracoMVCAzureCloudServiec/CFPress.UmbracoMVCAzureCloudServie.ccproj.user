@@ -4,5 +4,9 @@
     <PackageProfile>Cloud</PackageProfile>
     <PackageSolutionConfiguration>Release</PackageSolutionConfiguration>
     <PackageEnableRemoteDesktop>False</PackageEnableRemoteDesktop>
+    <RemoteDesktopMoreOptions>False</RemoteDesktopMoreOptions>
+    <ActivePublishProfile>CfpresscmsProduction</ActivePublishProfile>
+    <WebRoleSkipLaunchInBrowser>
+    </WebRoleSkipLaunchInBrowser>
   </PropertyGroup>
 </Project>

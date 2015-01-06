@@ -1,0 +1,46 @@
+﻿@inherits UmbracoTemplatePage
+
+@{
+    Layout = "umbLayout.cshtml";
+
+    // If the editor has not explicitly provided the "Page title" property page
+    // then just show the name of the page otherwise show the provided title
+    var pageTitle = string.IsNullOrWhiteSpace(CurrentPage.Title)
+        ? CurrentPage.Name
+        : CurrentPage.Title;
+
+}
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="9u skel-cell-mainContent">
+                <div class="content content-left">
+                    <!-- Content -->
+                    <article class="is-page-content">
+                        <header>
+                            <h2>@pageTitle</h2>
+                        </header>
+                        <section>
+                            @if (string.IsNullOrWhiteSpace(CurrentPage.Image) == false)
+                            {
+                                <span class="image image-full"><img src="@CurrentPage.Image" alt="" /></span>
+                            }
+
+                            @CurrentPage.BodyText
+                        </section>
+                    </article>
+                    <!-- /Content -->
+                </div>
+            </div>
+           </div>
+        @*<div class="row"> commenting this out because this is not needed anymore. I have added the related
+            links datatype as property to the news item
+            <div class="12u">
+
+             @{Html.RenderAction("GetRelatedPagesList", "RelatedNewsItemSurface");}*@
+        <div>
+            @{Html.RenderPartial("GalleryItem", new CFPress.UmbracoMVCApplication.Models.CompetitionsViewModel());}
+        </div>
+       
+    </div>
+</div>
