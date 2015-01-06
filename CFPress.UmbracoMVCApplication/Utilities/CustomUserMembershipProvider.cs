@@ -16,13 +16,13 @@ namespace CFPress.UmbracoMVCApplication.Utilities
         {
             var success = base.ValidateUser(username, password);
 
-            //if (success)
-            //{
-            //    if (userService.GetByUsername(username).UserType.Name == "Editors")
-            //    {
-            //        CFPress.UmbracoMVCApplication.Controllers.NewsItemController.CreateSaveDynamicNewsContentFromXmlFeed();
-            //    }
-            //}
+            if(success)
+            {
+                if(userService.GetByUsername(username).UserType.Name == "Editors")
+                {
+                    CFPress.UmbracoMVCApplication.Controllers.NewsItemController.CreateSaveDynamicNewsContentFromXmlFeed();
+                }
+            }
             return success;
         }
 

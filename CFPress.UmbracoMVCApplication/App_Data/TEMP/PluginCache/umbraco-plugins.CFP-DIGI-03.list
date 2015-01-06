@@ -2,7 +2,6 @@
 <plugins>
   <baseType type="umbraco.interfaces.IApplicationStartupHandler" resolutionType="FindAllTypes">
     <add type="umbraco.editorControls.PickerRelations.PickerRelationsEventHandler, umbraco.editorControls, Version=1.0.5394.16138, Culture=neutral, PublicKeyToken=null" />
-    <add type="Umbraco.Forms.Core.Services.WorkflowServiceApplication, Umbraco.Forms.Core, Version=3.0.23.0, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.providers.members.MembershipEventHandler, umbraco.providers, Version=1.0.5394.16134, Culture=neutral, PublicKeyToken=null" />
     <add type="CFPress.UmbracoMVCApplication.RegisterEvents.RegisterEvents, CFPress.UmbracoMVCApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.BusinessLogic.ApplicationRegistrar, businesslogic, Version=1.0.5394.16133, Culture=neutral, PublicKeyToken=null" />
@@ -38,6 +37,7 @@
     <add type="umbraco.presentation.nodeFactory.UmbracoSiteMapProviderAccessUpdate, umbraco, Version=1.0.5394.16136, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.presentation.EnsureSystemPathsApplicationStartupHandler, umbraco, Version=1.0.5394.16136, Culture=neutral, PublicKeyToken=null" />
     <add type="umbraco.presentation.umbraco.Search.ExamineEvents, umbraco, Version=1.0.5394.16136, Culture=neutral, PublicKeyToken=null" />
+    <add type="Umbraco.Forms.Core.Services.WorkflowServiceApplication, Umbraco.Forms.Core, Version=3.0.23.0, Culture=neutral, PublicKeyToken=null" />
   </baseType>
   <baseType type="Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter" resolutionType="FindAllTypes" />
   <baseType type="Umbraco.Core.PropertyEditors.IPropertyValueConverter" resolutionType="FindAllTypes">

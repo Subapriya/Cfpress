@@ -8,9 +8,7 @@ using CFPress.UmbracoMVCApplication.Models;
 using System.Net.Mail;
 using Umbraco.Core.Services;
 using Umbraco.Core;
-using SendGrid;
-using ActionMailer.Net.Mvc4;
-using System.Net;
+
 
 namespace CFPress.UmbracoMVCApplication.Controllers
 {
@@ -67,20 +65,7 @@ namespace CFPress.UmbracoMVCApplication.Controllers
                     try
                     {
                         //Send out verification email, with GUID in it
-
-                        EmailResult emailresult = new MailController().RegisterMemberVerificationEmail(model);
-                        SendGridMessage message = new SendGridMessage();
-                        
-                        // Create credentials, specifying your user name and password.
-                        var credentials = new NetworkCredential("azure_cbedf55269e3533b5976a8061ad59d69@azure.com", "tX8RE8oO63Z1wtZ");
-
-                        // Create a Web transport for sending email.
-                        var transportWeb = new Web(credentials);
-
-                        // Send the email.
-                        // You can also use the **DeliverAsync** method, which returns an awaitable task.
-                        transportWeb.Deliver(message);
-                        
+                        new MailController().RegisterMemberVerificationEmail(model).Deliver();
                     }
                     catch(Exception ex)
                     {

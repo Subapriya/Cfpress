@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ServiceConfiguration serviceName="CFPress.UmbracoMVCAzureCloudServie" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+<ServiceConfiguration serviceName="CFPress.UmbracoMVCAzureCloudServiec" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
   <Role name="CFPress.UmbracoMVCApplication">
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="UmbracoConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cfpressstorage;AccountKey=vT0wwkQWGPsMSlNb30nVkt+AGVuCV41CUe8/BCvhuT8L2CGhhC+46T1RCuBVKHdSShTXNpzmwWSsSsbdcdgUgg==" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="cfpress" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEHa+wqKs5cSCQo9/9JaV7xowDQYJKoZIhvcNAQEBBQAEggEAiAQhxA0BYB7O6/Wn8+ydxQzfqY/uKJEyvSA4mFyyXYNtl4qf2OCUABHuSli5CcDvAKqQUk3bmMSBho9CW23EWee9+toePfgCjftyzCMujFP32WU0FRl0jij9T5Y4SXnjPjK9MkJUcugp83HLV3UpXJH4nCUuKxjL1EqIb4s9ONMQoKxoreFgeoAJVXvUTewKWZa4Y2NEDY8EuW5HbG8hL0cl196YnOpgZTHgCxzxnsWFblkFPshO+QdA/5BpkDyrFn4IRpiLAWqbSWx1FAJcagK04HEAxcAko6R8AsvHtR+YM43I6knbK9R0VhP48BfZErBikoyxC6MYHu39WvwWOjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECAGFQPRjKf1vgBAXop7vXkP9qAeX5pEUCq5b" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-12-03T23:59:59.0000000+00:00" />
-      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
-      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cfpressstaticfiles;AccountKey=4iomdarlGoEWaCkvrPraD+8O+xfY/ERbTMrVte96Mm3oquuYWu2nMm9MJ5MuOZFlm+yNRdBc99QP5+SdHoE5iw==" />
     </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Certificate1" thumbprint="" thumbprintAlgorithm="sha1" />
-      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="1B46B3F054332C7295A4290F128180512E8AAA10" thumbprintAlgorithm="sha1" />
-    </Certificates>
   </Role>
 </ServiceConfiguration>

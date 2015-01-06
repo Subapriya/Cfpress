@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ServiceDefinition name="CFPress.UmbracoMVCAzureCloudServie" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+<ServiceDefinition name="CFPress.UmbracoMVCAzureCloudServiec" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
   <WebRole name="CFPress.UmbracoMVCApplication" vmsize="ExtraSmall">
     <Sites>
       <Site name="Web">
@@ -13,16 +13,6 @@
     </Endpoints>
     <ConfigurationSettings>
       <Setting name="UmbracoConnectionString" />
-      <Setting name="StorageConnectionString" />
     </ConfigurationSettings>
-    <Certificates>
-      <Certificate name="Certificate1" storeLocation="LocalMachine" storeName="My" />
-    </Certificates>
-    <Imports>
-      <Import moduleName="RemoteAccess" />
-      <Import moduleName="RemoteForwarder" />
-    </Imports>
-    <LocalResources>
-    </LocalResources>
   </WebRole>
 </ServiceDefinition>
